@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: < name>
+  namespace: monitoring
+spec:
+  secretName: <secret name>
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "<url>.in"
+  dnsNames:
+  - "<url>.in"

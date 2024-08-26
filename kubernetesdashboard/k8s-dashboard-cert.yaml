@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: < name>
+  namespace: kubernetes-dashboard
+spec:
+  secretName: <secret name>
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "<url>"
+  dnsNames:
+  - "<url>"
